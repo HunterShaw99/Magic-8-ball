@@ -17,12 +17,15 @@ public class MagicEightBall {
 		//Create a String, used to hold shake again or not.
 		String shakeAgain;
 		//int used to store a value of 1-8. Which is a fate decided by the Magic 8 Ball
-		int eightBall = (int) (Math.random() * 8);
+		int eightBall;
 		//Print a statement for the User. 
-		System.out.println("May god shine upon your fate!");
+		System.out.println("Ferociously shakes Magic 8-ball!!!");
 		System.out.println("");
 		//create a loop for the User to shake the magic 8 ball more than once. 
 		do {
+			
+			//Change the value on the eight ball for the next shake if there is another one. 
+			eightBall = (int) (Math.random() * 8);
 			
 			//switch to give out fates based upon the value given to integer eightBall.
 			switch (eightBall) {
@@ -63,9 +66,6 @@ public class MagicEightBall {
 			}else {
 				loopCheck = false;
 			}
-			
-			//Change the value on the eight ball for the next shake if there is another one. 
-			eightBall = (int) (Math.random() * 8);
 			
 		} while(loopCheck);
 		
